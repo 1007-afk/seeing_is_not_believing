@@ -31,13 +31,6 @@ However, modern vision-language backbones concatenate projected visual tokens di
                          +-------------------------------+
 ```
 
-### Key Empirical Findings
-
-1. **Modality Collapse (Text-Gullibility)**: When presented with contradictory textual assertions, instruction-tuned models exhibit severe modality collapse. LLaVA-1.5 abandons visual morphology in **94.5% to 99.6%** of conflict trials, adhering blindly to deceptive text. Conversely, Qwen2.5-VL defends visual reality in up to **72.2%** of conflict queries.
-2. **The "East Asian Anchor" Effect**: Across model scales, East Asian facial morphology serves as a remarkably robust visual prior, resisting deceptive textual gaslighting significantly more than other demographic groups (text adoption $<30\%$ on Qwen2-2B vs. $>80\%$ for other groups).
-3. **The High-Resolution Typographic Vulnerability**: Static low-resolution encoders (LLaVA-1.5 CLIP at $336\times 336$) resist typographic bottom-banner prompt injection ($<9.3\%$ ASR) because small text characters blur into sub-patch illegibility. In contrast, next-generation dynamic high-resolution ViTs (Qwen2.5-VL) resolve characters crisply, causing typographic injection vulnerability to resurge up to **90.4% ASR**.
-4. **Terminal Causal Circuit Invariance**: Layer-wise causal activation patching reveals that visual demographic representations persist intact through **85%** of model depth. Linguistic suppression heads override visual representations exclusively at the penultimate and terminal decoder layers ($L_{27}$ in Qwen2/2.5-VL, $L_{30}$ in LLaVA).
-
 ---
 
 ## 2. Repository Structure
@@ -231,7 +224,7 @@ for layer_info in patch_results["layers"]:
     print(f"Layer {layer_info['layer']}: Causal Recovery = {layer_info['causal_recovery']:.4f}")
 ```
 
-Causal recovery tracks the degree to which injecting intermediate activations restores the ground-truth visual prediction. Peak recovery consistently localizes to terminal layers ($L_{27}$ for 28-layer architectures, $L_{30}$ for 32-layer architectures).
+Causal recovery tracks the degree to which injecting intermediate activations restores the ground-truth visual prediction across transformer decoder layers.
 
 ---
 
