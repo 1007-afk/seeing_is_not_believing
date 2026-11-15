@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated experimental caches and results
+results/
+data/injected_images/
+data/fairface/
+data/bfw/
+data/utkface/
+*.log
+*.tmp
+*.zip
+*.tar.gz
+
+# Environment & credentials
+.env
+*.env
+credentials.json
+
+# Weights & Biases / Checkpoints
+wandb/
+checkpoints/
