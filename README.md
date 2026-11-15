@@ -3,10 +3,6 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.1+](https://img.shields.io/badge/pytorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Anonymity: Double-Blind](https://img.shields.io/badge/Anonymity-Double--Blind-lightgrey.svg)](#double-blind-review-statement)
-
-> **Anonymous Submission Repository**  
-> All institutional identifiers, author credentials, and submission identities have been strictly decoupled in compliance with conference double-blind review guidelines.
 
 ---
 
@@ -48,7 +44,7 @@ However, modern vision-language backbones concatenate projected visual tokens di
 
 ```
 seeing_is_not_believing/
-├── README.md                           # Master anonymous documentation & reproduction guide
+├── README.md                           # Master documentation & reproduction guide
 ├── requirements.txt                    # Python dependencies
 ├── .gitignore                          # Caches, checkpoint, and data ignore rules
 │
@@ -239,15 +235,6 @@ Causal recovery tracks the degree to which injecting intermediate activations re
 
 ---
 
-## 8. Double-Blind Review Statement
-
-In accordance with conference double-blind review policies:
-- All author names, affiliations, email addresses, and server credentials have been omitted.
-- Execution logs, scripts, and paths are completely isolated from host institutional environments.
-- Questions regarding reproduction or experimental configuration can be submitted via the conference author response console.
-
----
-
-## 9. License
+## 8. License
 
 This project is released under the **MIT License**.
